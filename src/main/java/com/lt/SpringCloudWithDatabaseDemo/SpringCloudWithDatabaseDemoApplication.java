@@ -1,8 +1,5 @@
 package com.lt.SpringCloudWithDatabaseDemo;
 
-import com.lt.controller.DemoController;
-import com.lt.repository.BookRepository;
-import com.lt.service.DemoService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;

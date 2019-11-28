@@ -1,18 +1,19 @@
 package com.lt.model;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @ToString
 public class Book {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Getter
     private Long id;
     @Setter
     @Getter
@@ -20,8 +21,8 @@ public class Book {
 
     @Setter
     @Getter
-    @ManyToOne(cascade={CascadeType.ALL})
-    private BookStore bookStore;
+    @ManyToMany(cascade = {CascadeType.ALL})
+    private List<BookStore> bookStoreList;
     // standard constructors
 
     // standard getters and setters

@@ -1,6 +1,5 @@
 package com.lt.model;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -20,6 +19,6 @@ public class BookStore {
     private String name;
 
     @Setter
-    @OneToMany
+    @ManyToMany(cascade = {CascadeType.ALL})
     private List<Book> bookList;
 }
